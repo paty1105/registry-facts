@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RegistryFacts.org — Research. Evidence. Real Impact.</title>
+<meta name="description" content="Explore decades of research, court decisions, and real-world data on sex offender registration laws and their impact on people, families, and communities.">
+<meta property="og:title" content="RegistryFacts.org — Research. Evidence. Real Impact.">
+<meta property="og:description" content="Plain-language explanations of what research actually shows about sex offender registration laws.">
+<meta property="og:type" content="website">
+<style>
+/* ── TOKENS ── */
+:root {
+  --ink:       #0f1923;
+  --ink-soft:  #3d4a56;
+  --ink-muted: #7a8896;
+  --navy:      #111e2e;
+  --navy-mid:  #1a2e45;
+  --surface:   #f7f6f3;
+  --white:     #ffffff;
+  --accent:    #1a3f5c;
+  --accent2:   #2d6a8f;
+  --gold:      #c8923a;
+  --gold-light:#fdf4e4;
+  --sage:      #3a6b50;
+  --border:    #e2ddd6;
+  --radius:    6px;
+  --max:       1200px;
+  --col:       780px;
+  --font-d:    'Georgia','Times New Roman',serif;
+  --font-b:    system-ui,-apple-system,'Segoe UI',sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--font-b);background:var(--surface);color:var(--ink);line-height:1.75;font-size:17px;}
+a{color:var(--accent2);}
+a:hover{text-decoration:underline;}
+img{max-width:100%;display:block;}
+
+/* ── NAV ── */
+nav{position:sticky;top:0;z-index:200;background:var(--white);border-bottom:1px solid var(--border);}
+.nav-inner{max-width:var(--max);margin:0 auto;padding:0 32px;display:flex;align-items:center;justify-content:space-between;height:62px;gap:24px;}
+.nav-brand{display:flex;flex-direction:column;text-decoration:none;}
+.nav-brand-name{font-family:var(--font-d);font-size:1.15rem;font-weight:bold;color:var(--ink);line-height:1;}
+.nav-brand-name span{color:var(--accent2);}
+.nav-brand-tag{font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-muted);margin-top:2px;}
+.nav-links{display:flex;gap:2px;list-style:none;}
+.nav-links a{font-size:.82rem;color:var(--ink-soft);text-decoration:none;padding:7px 11px;border-radius:var(--radius);white-space:nowrap;transition:background .15s,color .15s;}
+.nav-links a:hover{background:#f0f4f8;color:var(--accent);}
+.nav-cta{background:var(--navy);color:white!important;border-radius:var(--radius);padding:9px 18px!important;font-weight:600;white-space:nowrap;}
+.nav-cta:hover{background:var(--accent)!important;color:white!important;}
+.nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;border:none;background:none;}
+.nav-hamburger span{display:block;width:22px;height:2px;background:var(--ink);border-radius:2px;transition:transform .2s,opacity .2s;}
+.nav-hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.nav-hamburger.open span:nth-child(2){opacity:0;}
+.nav-hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+.mobile-menu{display:none;background:var(--white);border-bottom:1px solid var(--border);padding:12px 32px 20px;}
+.mobile-menu.open{display:block;}
+.mobile-menu a{display:block;padding:11px 0;color:var(--ink-soft);text-decoration:none;font-size:.95rem;border-bottom:1px solid var(--border);}
+.mobile-menu a:last-child{border-bottom:none;}
+
+/* ── HERO ── */
+.hero{background:var(--white);min-height:88vh;display:grid;grid-template-columns:1fr 1fr;position:relative;overflow:hidden;}
+.hero-left{padding:80px 48px 80px 64px;display:flex;flex-direction:column;justify-content:center;position:relative;z-index:2;}
+.hero-eyebrow{font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:20px;display:block;}
+.hero h1{font-family:var(--font-d);font-size:clamp(2.2rem,4vw,3.4rem);line-height:1.15;color:var(--ink);margin-bottom:18px;font-weight:normal;}
+.hero-rule{width:52px;height:3px;background:var(--gold);margin-bottom:24px;border-radius:2px;}
+.hero-sub{font-size:1.05rem;color:var(--ink-soft);line-height:1.75;margin-bottom:36px;max-width:460px;}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:20px;}
+.btn-dark{display:inline-flex;align-items:center;gap:8px;background:var(--navy);color:white;text-decoration:none;padding:13px 24px;border-radius:var(--radius);font-weight:600;font-size:.93rem;transition:background .15s;}
+.btn-dark:hover{background:var(--accent);text-decoration:none;color:white;}
+.btn-ghost{display:inline-flex;align-items:center;gap:6px;color:var(--ink-soft);text-decoration:none;font-size:.88rem;padding:13px 4px;}
+.btn-ghost:hover{color:var(--accent2);}
+.hero-right{position:relative;overflow:hidden;}
+.hero-img{width:100%;height:100%;object-fit:cover;object-position:center;}
+.hero-overlay-card{position:absolute;bottom:48px;right:32px;background:var(--navy);color:white;padding:22px 24px;border-radius:var(--radius);max-width:220px;box-shadow:0 8px 32px rgba(0,0,0,.3);}
+.hoc-eyebrow{font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;display:block;}
+.hoc-text{font-family:var(--font-d);font-size:.95rem;line-height:1.45;color:white;margin-bottom:12px;}
+.hoc-sub{font-size:.72rem;color:rgba(255,255,255,.5);letter-spacing:.06em;text-transform:uppercase;}
+
+/* ── STAT STRIP ── */
+.stat-strip{background:var(--navy);padding:40px 32px;}
+.stat-strip-inner{max-width:var(--max);margin:0 auto;}
+.stat-strip-label{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:28px;}
+.stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;}
+.stat-item{padding:0 32px 0 0;border-right:1px solid rgba(255,255,255,.08);}
+.stat-item:last-child{border-right:none;padding-right:0;}
+.stat-item:first-child{padding-left:0;}
+.stat-icon{margin-bottom:12px;opacity:.6;}
+.stat-num{font-family:var(--font-d);font-size:2.4rem;color:white;line-height:1;margin-bottom:6px;}
+.stat-desc{font-size:.83rem;color:rgba(255,255,255,.6);line-height:1.5;margin-bottom:6px;}
+.stat-cite{font-size:.68rem;color:var(--gold);font-style:italic;}
+
+/* ── SECTION SHELL ── */
+.section{padding:76px 32px;}
+.section.alt{background:var(--white);}
+.section-inner{max-width:var(--max);margin:0 auto;}
+.section-label{font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent2);font-weight:700;margin-bottom:12px;display:block;}
+h2.section-h{font-family:var(--font-d);font-size:clamp(1.6rem,3vw,2.1rem);line-height:1.25;color:var(--ink);margin-bottom:6px;font-weight:normal;}
+.section-rule{width:40px;height:2px;background:var(--gold);margin:14px 0 24px;border-radius:2px;}
+p{margin-bottom:18px;color:var(--ink-soft);line-height:1.8;}
+p:last-child{margin-bottom:0;}
+h3.sub-h{font-size:1.05rem;font-weight:700;color:var(--ink);margin:32px 0 10px;}
+
+/* ── TWO-COL ARTICLE ── */
+.article-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;margin:36px 0;}
+.article-grid.flip .ag-photo{order:2;}
+.article-grid.flip .ag-text{order:1;}
+.ag-photo{border-radius:10px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,.1);}
+.ag-photo img{width:100%;height:300px;object-fit:cover;}
+.ag-photo-caption{font-size:.75rem;color:var(--ink-muted);padding:10px 14px;font-style:italic;background:var(--surface);border-top:1px solid var(--border);}
+
+/* ── CALLOUT ── */
+.callout{border-left:4px solid var(--accent2);background:#eef5fa;padding:18px 22px;border-radius:0 var(--radius) var(--radius) 0;margin:24px 0;}
+.callout p{color:var(--ink);margin:0;font-size:.96rem;}
+.callout strong{color:var(--accent);}
+.callout.gold{border-left-color:var(--gold);background:var(--gold-light);}
+.callout.gold strong{color:#8a5c1a;}
+.callout.sage{border-left-color:var(--sage);background:#eaf3ee;}
+.callout.sage strong{color:var(--sage);}
+
+/* ── PULL QUOTE ── */
+.pull-quote{margin:36px 0;padding:32px 36px 28px;background:var(--navy);border-radius:var(--radius);position:relative;overflow:hidden;}
+.pull-quote::before{content:'\201C';font-family:var(--font-d);font-size:8rem;color:white;line-height:.7;position:absolute;top:12px;left:20px;opacity:.07;}
+.pull-quote p{font-family:var(--font-d);font-size:1.2rem;font-style:italic;color:white;line-height:1.65;margin:0;position:relative;z-index:1;}
+.pull-quote cite{display:block;font-size:.78rem;color:rgba(255,255,255,.45);margin-top:14px;font-style:normal;position:relative;z-index:1;}
+
+/* ── TOPIC CARDS ── */
+.topic-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:32px 0;}
+.topic-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;text-decoration:none;transition:box-shadow .2s,transform .2s;display:block;}
+.topic-card:hover{box-shadow:0 8px 32px rgba(0,0,0,.1);transform:translateY(-2px);text-decoration:none;}
+.tc-img{height:140px;overflow:hidden;}
+.tc-img img{width:100%;height:100%;object-fit:cover;transition:transform .3s;}
+.topic-card:hover .tc-img img{transform:scale(1.04);}
+.tc-body{padding:18px 18px 20px;}
+.tc-label{font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent2);font-weight:700;margin-bottom:6px;display:block;}
+.tc-title{font-family:var(--font-d);font-size:1.05rem;color:var(--ink);margin-bottom:8px;line-height:1.3;}
+.tc-desc{font-size:.84rem;color:var(--ink-soft);margin:0;line-height:1.6;}
+
+/* ── COMPARE TABLE ── */
+.compare-wrap{overflow-x:auto;margin:28px 0;}
+.compare-table{width:100%;border-collapse:collapse;font-size:.9rem;min-width:540px;}
+.compare-table th{background:var(--navy);color:white;padding:13px 18px;text-align:left;font-weight:600;font-size:.78rem;letter-spacing:.04em;}
+.compare-table th:first-child{border-radius:var(--radius) 0 0 0;}
+.compare-table th:last-child{border-radius:0 var(--radius) 0 0;}
+.compare-table td{padding:12px 18px;border-bottom:1px solid var(--border);color:var(--ink-soft);vertical-align:top;}
+.compare-table tr:last-child td{border-bottom:none;}
+.compare-table tr:nth-child(even) td{background:#f9f8f6;}
+.tag-t{display:inline-block;font-size:.68rem;background:#e4f0e4;color:#2d5a2d;border-radius:3px;padding:2px 7px;font-weight:600;}
+.tag-n{display:inline-block;font-size:.68rem;background:#f0e4e4;color:#7a2020;border-radius:3px;padding:2px 7px;font-weight:600;}
+
+/* ── BIG STATS ── */
+.big-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin:32px 0;}
+.bs-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:26px 22px;text-align:center;border-top:3px solid var(--accent2);}
+.bs-num{font-family:var(--font-d);font-size:2.5rem;color:var(--accent2);line-height:1;margin-bottom:8px;}
+.bs-label{font-size:.82rem;color:var(--ink-muted);line-height:1.5;}
+
+/* ── VIOLATION DIAGRAM ── */
+.vd-wrap{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:28px 24px;margin:28px 0;}
+.vd-caption{text-align:center;font-size:.8rem;color:var(--ink-muted);margin-bottom:22px;font-style:italic;}
+.vd-row{display:flex;gap:16px;align-items:stretch;}
+.vd-box{flex:1;padding:20px 18px;border-radius:var(--radius);}
+.vd-box.green{background:#eaf4ea;border:2px solid #4a8a4a;}
+.vd-box.red{background:#faeaea;border:2px solid #c04040;}
+.vd-title{font-weight:700;font-size:.9rem;margin-bottom:12px;text-align:center;}
+.vd-title.g{color:#2a6a2a;}
+.vd-title.r{color:#8a1a1a;}
+.vd-box ul{list-style:none;font-size:.83rem;color:var(--ink-soft);}
+.vd-box ul li{padding:4px 0;border-bottom:1px solid rgba(0,0,0,.05);}
+.vd-box ul li:last-child{border:none;}
+.vd-box ul li::before{content:"· ";color:var(--ink-muted);}
+.vd-mid{display:flex;align-items:center;justify-content:center;font-size:1.6rem;color:var(--ink-muted);font-weight:bold;min-width:32px;}
+
+/* ── TIMELINE ── */
+.timeline{margin:32px 0;}
+.tl-item{display:flex;gap:22px;margin-bottom:26px;position:relative;}
+.tl-item::before{content:'';position:absolute;left:30px;top:46px;bottom:-26px;width:2px;background:var(--border);}
+.tl-item:last-child::before{display:none;}
+.tl-yr{min-width:62px;height:62px;background:var(--accent);color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.7rem;font-weight:700;text-align:center;line-height:1.2;flex-shrink:0;z-index:1;}
+.tl-body{padding-top:12px;}
+.tl-body h3{font-size:.95rem;margin:0 0 5px;color:var(--ink);}
+.tl-body p{font-size:.87rem;margin:0;color:var(--ink-soft);}
+
+/* ── COURT CARDS ── */
+.court-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin:28px 0;}
+.court-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:24px 20px;border-top:4px solid var(--accent2);}
+.cc-name{font-family:var(--font-d);font-style:italic;font-size:1.05rem;color:var(--ink);margin-bottom:4px;}
+.cc-year{font-size:.72rem;color:var(--accent2);font-weight:600;margin-bottom:12px;display:block;}
+.court-card p{font-size:.87rem;}
+
+/* ── FAQ ── */
+.faq{margin:28px 0;}
+.faq-item{border:1px solid var(--border);border-radius:var(--radius);margin-bottom:10px;overflow:hidden;}
+.faq-q{display:flex;justify-content:space-between;align-items:center;padding:17px 22px;cursor:pointer;background:var(--white);font-weight:600;font-size:.93rem;color:var(--ink);gap:14px;user-select:none;transition:background .15s;}
+.faq-q:hover{background:#f0f4f8;}
+.faq-icon{color:var(--accent2);font-size:1.2rem;flex-shrink:0;transition:transform .2s;line-height:1;}
+.faq-a{display:none;padding:0 22px 18px;background:var(--white);border-top:1px solid var(--border);}
+.faq-a p{font-size:.91rem;margin-top:14px;}
+.faq-item.open .faq-a{display:block;}
+.faq-item.open .faq-icon{transform:rotate(45deg);}
+
+/* ── SIDEBAR LAYOUT ── */
+.sidebar-layout{display:grid;grid-template-columns:1fr 340px;gap:48px;align-items:start;}
+.sidebar-sticky{position:sticky;top:78px;}
+.sidebar-box{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:24px 22px;margin-bottom:20px;}
+.sb-title{font-family:var(--font-d);font-size:1.05rem;color:var(--ink);margin-bottom:18px;padding-bottom:12px;border-bottom:1px solid var(--border);}
+.sb-item{display:flex;align-items:flex-start;gap:12px;padding:12px 0;border-bottom:1px solid var(--border);}
+.sb-item:last-child{border-bottom:none;padding-bottom:0;}
+.sb-icon{width:36px;height:36px;border-radius:50%;background:var(--surface);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.sb-item-text strong{display:block;font-size:.88rem;color:var(--ink);margin-bottom:3px;}
+.sb-item-text span{font-size:.8rem;color:var(--ink-muted);line-height:1.5;}
+.research-item{padding:12px 0;border-bottom:1px solid var(--border);}
+.research-item:last-child{border-bottom:none;}
+.ri-title{font-size:.88rem;font-weight:600;color:var(--ink);margin-bottom:3px;}
+.ri-meta{font-size:.75rem;color:var(--ink-muted);margin-bottom:6px;}
+.ri-link{font-size:.78rem;color:var(--accent2);text-decoration:none;font-weight:600;}
+.ri-link:hover{text-decoration:underline;}
+
+/* ── EMAIL SIGNUP ── */
+.email-strip{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:28px 24px;margin-top:0;}
+.email-strip h3{font-size:1rem;color:var(--ink);margin-bottom:6px;}
+.email-strip p{font-size:.83rem;color:var(--ink-muted);margin-bottom:16px;}
+.email-form{display:flex;gap:8px;}
+.email-input{flex:1;padding:10px 14px;border:1px solid var(--border);border-radius:var(--radius);font-size:.88rem;font-family:var(--font-b);color:var(--ink);background:var(--white);}
+.email-input:focus{outline:2px solid var(--accent2);border-color:transparent;}
+.email-btn{background:var(--navy);color:white;border:none;padding:10px 18px;border-radius:var(--radius);font-size:.85rem;font-weight:600;cursor:pointer;white-space:nowrap;transition:background .15s;}
+.email-btn:hover{background:var(--accent);}
+
+/* ── ABOUT BLOCK ── */
+.about-block{background:var(--accent);padding:68px 32px;}
+.about-inner{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:240px 1fr;gap:56px;align-items:start;}
+.about-left{}
+.about-org{font-family:var(--font-d);font-size:1.3rem;color:white;margin-bottom:6px;font-weight:normal;}
+.about-sub{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.45);}
+.about-rule{width:36px;height:2px;background:rgba(255,255,255,.25);margin:16px 0;}
+.about-pillars{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:20px;}
+.ab-pill{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:12px 14px;}
+.ab-pill strong{display:block;font-size:.78rem;color:white;margin-bottom:3px;}
+.ab-pill span{font-size:.73rem;color:rgba(255,255,255,.5);}
+.about-right .section-label{color:rgba(255,255,255,.45);}
+.about-right h2{color:white;margin-bottom:16px;}
+.about-right p{color:rgba(255,255,255,.7);font-size:.95rem;}
+.about-right a{color:white;font-weight:600;text-underline-offset:3px;}
+
+/* ── RRI BRIDGE ── */
+.rri-bridge{background:var(--navy);color:white;text-align:center;padding:60px 32px;}
+.rri-bridge h2{font-family:var(--font-d);font-size:1.8rem;color:white;margin-bottom:14px;font-weight:normal;}
+.rri-bridge p{color:rgba(255,255,255,.6);max-width:520px;margin:0 auto 28px;}
+.btn-gold{display:inline-block;background:var(--gold);color:white;text-decoration:none;padding:14px 30px;border-radius:var(--radius);font-weight:700;font-size:.95rem;transition:opacity .15s;}
+.btn-gold:hover{opacity:.88;text-decoration:none;color:white;}
+
+/* ── FOOTER ── */
+footer{background:#090f17;color:rgba(255,255,255,.4);padding:48px 32px;}
+.footer-inner{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:1fr 1fr 1fr;gap:40px;}
+.footer-brand-name{font-family:var(--font-d);font-size:1.1rem;color:white;margin-bottom:6px;}
+.footer-brand-tag{font-size:.72rem;color:rgba(255,255,255,.3);letter-spacing:.08em;text-transform:uppercase;}
+.footer-col h4{font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:14px;}
+.footer-col a{display:block;font-size:.83rem;color:rgba(255,255,255,.45);text-decoration:none;margin-bottom:8px;}
+.footer-col a:hover{color:rgba(255,255,255,.8);}
+.footer-bottom{max-width:var(--max);margin:36px auto 0;padding-top:24px;border-top:1px solid rgba(255,255,255,.07);font-size:.75rem;color:rgba(255,255,255,.25);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;}
+
+/* ── HUMAN BANNER ── */
+.human-banner{background:#fdf4e4;border-top:3px solid var(--gold);padding:0 32px;}
+.hb-inner{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:0;}
+.hb-card{padding:30px 32px 30px 0;}
+.hb-card+.hb-card{padding:30px 0 30px 32px;border-left:1px solid #e8dcc8;}
+.hb-tag{font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:#9a6820;font-weight:700;margin-bottom:8px;display:block;}
+.hb-card h3{font-family:var(--font-d);font-size:1rem;color:var(--ink);margin-bottom:8px;font-weight:normal;line-height:1.4;}
+.hb-card p{font-size:.86rem;color:var(--ink-soft);margin:0;line-height:1.65;}
+
+/* ── RESPONSIVE ── */
+@media(max-width:960px){
+  .hero{grid-template-columns:1fr;min-height:auto;}
+  .hero-right{height:320px;}
+  .hero-left{padding:56px 32px;}
+  .stat-grid{grid-template-columns:1fr 1fr;gap:28px;}
+  .stat-item{border-right:none;padding-right:0;border-bottom:1px solid rgba(255,255,255,.08);padding-bottom:24px;}
+  .stat-item:nth-child(odd){border-right:1px solid rgba(255,255,255,.08);padding-right:24px;}
+  .sidebar-layout{grid-template-columns:1fr;}
+  .sidebar-sticky{position:static;}
+  .topic-grid{grid-template-columns:1fr 1fr;}
+  .court-grid{grid-template-columns:1fr;}
+  .about-inner{grid-template-columns:1fr;gap:28px;}
+  .about-pillars{grid-template-columns:1fr 1fr;}
+  .footer-inner{grid-template-columns:1fr 1fr;}
+  .big-stats{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:640px){
+  .nav-links{display:none;}
+  .nav-hamburger{display:flex;}
+  .hero-left{padding:40px 24px;}
+  .hero h1{font-size:1.9rem;}
+  .section{padding:52px 20px;}
+  .stat-grid{grid-template-columns:1fr;}
+  .stat-item{border-right:none!important;padding-right:0!important;}
+  .hb-inner{grid-template-columns:1fr;}
+  .hb-card+.hb-card{padding-left:0;border-left:none;border-top:1px solid #e8dcc8;padding-top:24px;}
+  .topic-grid{grid-template-columns:1fr;}
+  .article-grid{grid-template-columns:1fr;}
+  .big-stats{grid-template-columns:1fr;}
+  .vd-row{flex-direction:column;}
+  .vd-mid{padding:8px 0;}
+  .court-grid{grid-template-columns:1fr;}
+  .about-pillars{grid-template-columns:1fr;}
+  .footer-inner{grid-template-columns:1fr;}
+  .footer-bottom{flex-direction:column;}
+  .compare-wrap{overflow-x:auto;}
+  .nav-inner{padding:0 20px;}
+  .about-block{padding:48px 20px;}
+  .human-banner{padding:0 20px;}
+  .stat-strip{padding:36px 20px;}
+  .rri-bridge{padding:48px 20px;}
+  footer{padding:40px 20px;}
+}
+</style>
+</head>
+<body>
+
+<!-- ════════════════════════ NAV ════════════════════════ -->
+<nav id="top">
+  <div class="nav-inner">
+    <a class="nav-brand" href="#top">
+      <span class="nav-brand-name"><span>Registry</span>Facts.org</span>
+      <span class="nav-brand-tag">Research. Evidence. Real Impact.</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#topics">Topics</a></li>
+      <li><a href="#evidence">Evidence</a></li>
+      <li><a href="#courts">Court Decisions</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#evidence" class="nav-cta">Explore the Evidence →</a></li>
+    </ul>
+    <button class="nav-hamburger" id="hb" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mm">
+  <a href="#topics" class="ml">Topics</a>
+  <a href="#evidence" class="ml">Evidence</a>
+  <a href="#courts" class="ml">Court Decisions</a>
+  <a href="#faq" class="ml">FAQ</a>
+  <a href="#about" class="ml">About</a>
+</div>
+
+<!-- ════════════════════════ HERO ════════════════════════ -->
+<div class="hero">
+  <div class="hero-left">
+    <span class="hero-eyebrow">Evidence-Based · Plain Language · No Agenda</span>
+    <h1>Better policy starts with better evidence.</h1>
+    <div class="hero-rule"></div>
+    <p class="hero-sub">Explore decades of research, court decisions, and real-world data on registration laws and their impact on people, families, and communities.</p>
+    <div class="hero-actions">
+      <a href="#topics" class="btn-dark">Start Exploring →</a>
+      <a href="#stat-strip" class="btn-ghost">↓ Scroll to discover</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <img class="hero-img"
+      src="https://images.unsplash.com/photo-1511895426328-dc8714191011?w=900&q=80&auto=format&fit=crop"
+      alt="Family looking out window together"
+      loading="eager">
+    <div class="hero-overlay-card">
+      <span class="hoc-eyebrow">At the heart of every policy are people.</span>
+      <p class="hoc-text">Every registry entry reaches far beyond one person.</p>
+      <span class="hoc-sub">Families. Homes. Futures.</span>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════ HUMAN BANNER ════════════════════════ -->
+<div class="human-banner">
+  <div class="hb-inner">
+    <div class="hb-card">
+      <span class="hb-tag">If this affects your family</span>
+      <h3>You're not alone in trying to understand this.</h3>
+      <p>Whether you're a spouse, parent, or family member navigating registration requirements — this site is written for you. Start with the topics below. No jargon, no agenda.</p>
+    </div>
+    <div class="hb-card">
+      <span class="hb-tag">If you're on the registry</span>
+      <h3>What the law actually requires — and what courts are questioning.</h3>
+      <p>Requirements have expanded dramatically since 2003. Courts across the country are actively reconsidering whether today's system is constitutional. The evidence is here.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════ STAT STRIP ════════════════════════ -->
+<div class="stat-strip" id="stat-strip">
+  <div class="stat-strip-inner">
+    <div class="stat-strip-label">The Big Picture</div>
+    <div class="stat-grid">
+      <div class="stat-item">
+        <div class="stat-icon">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="13" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/><path d="M9 14l3.5 3.5L19 10" stroke="rgba(255,255,255,0.7)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="stat-num">93%</div>
+        <div class="stat-desc">of new sexual offenses are committed by someone not currently on the registry</div>
+        <div class="stat-cite">DOJ, 2020</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-icon">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M4 22 Q14 4 24 22" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" fill="none"/><circle cx="14" cy="16" r="3" fill="rgba(255,255,255,0.5)"/></svg>
+        </div>
+        <div class="stat-num">5.5%</div>
+        <div class="stat-desc">10-year sexual reconviction rate in major long-term studies of released offenders</div>
+        <div class="stat-cite">BJS, 2018</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-icon">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="10" cy="10" r="4" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/><circle cx="18" cy="10" r="4" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/><circle cx="14" cy="20" r="4" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/></svg>
+        </div>
+        <div class="stat-num">2–5×</div>
+        <div class="stat-desc">increase in homelessness risk for people on the registry due to residency restrictions</div>
+        <div class="stat-cite">Multiple Studies</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-icon">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="4" y="8" width="20" height="16" rx="2" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/><path d="M10 8V6a4 4 0 018 0v2" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/></svg>
+        </div>
+        <div class="stat-num">200+</div>
+        <div class="stat-desc">distinct reporting requirements imposed on registrants in some states — up from a handful in 2003</div>
+        <div class="stat-cite">NARSOL, 2023</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════ TOPICS ════════════════════════ -->
+<div class="section alt" id="topics">
+  <div class="section-inner">
+    <span class="section-label">Explore by Topic</span>
+    <h2 class="section-h">What would you like to understand?</h2>
+    <div class="section-rule"></div>
+    <div class="topic-grid">
+      <a class="topic-card" href="#does-it-work">
+        <div class="tc-img"><img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?w=600&q=75&auto=format&fit=crop" alt="Data charts" loading="lazy"></div>
+        <div class="tc-body"><span class="tc-label">Effectiveness</span><div class="tc-title">Does It Prevent Crime?</div><p class="tc-desc">What research says about whether the registry actually reduces sexual offending.</p></div>
+      </a>
+      <a class="topic-card" href="#the-science">
+        <div class="tc-img"><img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&q=75&auto=format&fit=crop" alt="Diverse group of people" loading="lazy"></div>
+        <div class="tc-body"><span class="tc-label">Behavioral Science</span><div class="tc-title">Who Commits New Offenses?</div><p class="tc-desc">Understanding the actual data on reoffending — and what it does and doesn't tell us.</p></div>
+      </a>
+      <a class="topic-card" href="#families">
+        <div class="tc-img"><img src="https://images.unsplash.com/photo-1576941089067-2de3c901e126?w=600&q=75&auto=format&fit=crop" alt="Family together" loading="lazy"></div>
+        <div class="tc-body"><span class="tc-label">Collateral Impact</span><div class="tc-title">Impact on Families</div><p class="tc-desc">The ripple effects on spouses, children, and communities that rarely make headlines.</p></div>
+      </a>
+      <a class="topic-card" href="#violations">
+        <div class="tc-img"><img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&q=75&auto=format&fit=crop" alt="Person at desk with paperwork" loading="lazy"></div>
+        <div class="tc-body"><span class="tc-label">Understanding the Data</span><div class="tc-title">Paperwork vs. New Crimes</div><p class="tc-desc">Why the distinction between technical violations and new offenses matters enormously.</p></div>
+      </a>
+      <a class="topic-card" href="#courts">
+        <div class="tc-img"><img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=600&q=75&auto=format&fit=crop" alt="Courthouse" loading="lazy"></div>
+        <div class="tc-body"><span class="tc-label">Legal Landscape</span><div class="tc-title">Court Decisions That Matter</div><p class="tc-desc">The legal evolution — from the 2003 Supreme Court ruling to today's circuit challenges.</p></div>
+      </a>
+      <a class="topic-card" href="#how-it-changed">
+        <div class="tc-img"><img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&q=75&auto=format&fit=crop" alt="Documents and research" loading="lazy"></div>
+        <div class="tc-body"><span class="tc-label">Policy History</span><div class="tc-title">How the Registry Grew</div><p class="tc-desc">From a modest 1994 law to today's 200+ requirements — a timeline of expansion.</p></div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════ EVIDENCE MAIN ════════════════════════ -->
+<div class="section" id="evidence">
+  <div class="section-inner">
+    <div class="sidebar-layout">
+
+      <!-- MAIN CONTENT -->
+      <div>
+
+        <!-- WHAT IS IT -->
+        <span class="section-label">Section 01 — The Basics</span>
+        <h2 class="section-h" id="what-is-it">What is sex offender registration, really?</h2>
+        <div class="section-rule"></div>
+
+        <div class="article-grid">
+          <div class="ag-photo">
+            <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?w=700&q=80&auto=format&fit=crop" alt="Family reviewing documents together" loading="lazy">
+            <div class="ag-photo-caption">Families across the country navigate registration requirements that have grown dramatically since 2003.</div>
+          </div>
+          <div class="ag-text">
+            <p>Sex offender registration laws require people convicted of certain sexual offenses to report personal information to the government on an ongoing basis — and in many states, to remain on a public website for years or even a lifetime.</p>
+            <p>Most people assume registration means a name and address on a website. That's part of it. But in most states today, registration involves quarterly in-person reporting, disclosure of every email address and social media account, advance reporting of travel, and restrictions on where a person may live.</p>
+            <div class="callout">
+              <p>Registration is not a one-time event. In most states, it is an ongoing system of requirements that can span decades — or never end at all.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- HOW IT CHANGED -->
+        <span class="section-label" style="margin-top:56px;display:block;" id="how-it-changed">Section 02 — History</span>
+        <h2 class="section-h">The registry of today is not the registry of 2003</h2>
+        <div class="section-rule"></div>
+
+        <div class="article-grid flip">
+          <div class="ag-photo">
+            <img src="https://images.unsplash.com/photo-1436450412740-6b988f486c6b?w=700&q=80&auto=format&fit=crop" alt="Historic courthouse" loading="lazy">
+            <div class="ag-photo-caption">The Supreme Court's 2003 ruling reviewed a system far less expansive than what most states require today.</div>
+          </div>
+          <div class="ag-text">
+            <p>The U.S. Supreme Court ruled in 2003 that sex offender registration laws were constitutional. But the system it evaluated — an annual mailed update and limited public access — looks nothing like what most states require today.</p>
+            <p>In the two decades since, state legislatures and Congress have layered requirement upon requirement onto that original framework. Many legal scholars argue the 2003 Court never approved the current system — because it never saw it.</p>
+            <div class="callout sage">
+              <p><strong>The legal significance:</strong> A growing number of federal courts are reconsidering whether the expanded requirements still qualify as civil regulation — or whether they have become punishment in all but name.</p>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="sub-h">2003 vs. Today: What Changed</h3>
+        <div class="compare-wrap">
+          <table class="compare-table">
+            <thead><tr><th>Requirement</th><th>2003 (When Court Ruled)</th><th>Today (Many States)</th></tr></thead>
+            <tbody>
+              <tr><td>Address reporting</td><td><span class="tag-t">Annual</span> mailed update</td><td><span class="tag-n">In-person</span> quarterly or more often</td></tr>
+              <tr><td>Public notification</td><td><span class="tag-t">Limited</span> — some states, by request</td><td><span class="tag-n">Automatic</span> public website with photo, address, workplace</td></tr>
+              <tr><td>Internet identifiers</td><td><span class="tag-t">Not required</span></td><td><span class="tag-n">Required</span> — email, usernames, social media</td></tr>
+              <tr><td>Travel reporting</td><td><span class="tag-t">Not required</span> in most states</td><td><span class="tag-n">Required</span> — international and sometimes domestic</td></tr>
+              <tr><td>Residency restrictions</td><td><span class="tag-t">Rare</span></td><td><span class="tag-n">Common</span> — often within 1,000–2,500 ft of schools, parks</td></tr>
+              <tr><td>ID marking</td><td><span class="tag-t">Not used</span></td><td><span class="tag-n">Required</span> in many states — driver's license and passport</td></tr>
+              <tr><td>Temporary lodging</td><td><span class="tag-t">Not required</span></td><td><span class="tag-n">Must report</span> any overnight stay away from home</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="sub-h">A Brief Timeline</h3>
+        <div class="timeline">
+          <div class="tl-item"><div class="tl-yr">1994</div><div class="tl-body"><h3>Jacob Wetterling Act</h3><p>First federal law requiring states to maintain registries. Focused on law enforcement access — not public websites.</p></div></div>
+          <div class="tl-item"><div class="tl-yr">1996</div><div class="tl-body"><h3>Megan's Law</h3><p>Required states to make registry information publicly available. Created the modern public notification model.</p></div></div>
+          <div class="tl-item"><div class="tl-yr">2003</div><div class="tl-body"><h3>Smith v. Doe — Supreme Court Rules</h3><p>The Court upheld Alaska's registry as civil regulation. But that registry was far less expansive than today's.</p></div></div>
+          <div class="tl-item"><div class="tl-yr">2006</div><div class="tl-body"><h3>Adam Walsh Act / SORNA</h3><p>Created a national three-tier framework. Dramatically expanded requirements: in-person reporting, internet identifiers, travel notifications, passport markings.</p></div></div>
+          <div class="tl-item"><div class="tl-yr">Now</div><div class="tl-body"><h3>A patchwork — and an ongoing legal debate</h3><p>Each state has different rules. Courts in multiple circuits are actively questioning whether the current system remains constitutional.</p></div></div>
+        </div>
+
+        <!-- THE SCIENCE -->
+        <span class="section-label" style="margin-top:56px;display:block;" id="the-science">Section 03 — Behavioral Science</span>
+        <h2 class="section-h">What does the research say about risk?</h2>
+        <div class="section-rule"></div>
+
+        <div class="article-grid">
+          <div class="ag-photo">
+            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=700&q=80&auto=format&fit=crop" alt="Diverse people in community" loading="lazy">
+            <div class="ag-photo-caption">Risk of reoffense is not fixed — research consistently shows it decreases over time for most people.</div>
+          </div>
+          <div class="ag-text">
+            <p>Long-term studies consistently find that the majority of people convicted of sexual offenses do not commit new sexual offenses after release. Recidivism rates vary by how "recidivism" is defined — a critical distinction — but studies measuring new sexual convictions typically find rates in the range of 5 to 15 percent over five-to-fifteen-year follow-up periods.</p>
+            <p>Perhaps more importantly, risk is not static. Multiple large studies have found that the longer a person remains offense-free, the lower their risk of future offending becomes. This is called desistance — and it has significant implications for lifetime registration policies.</p>
+            <div class="callout gold">
+              <p><strong>The structural limitation:</strong> Because registries only list people already convicted, they cannot include first-time offenders — responsible for the majority of new sexual offenses. This is a factual constraint that researchers consistently note when evaluating registry effectiveness.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="big-stats">
+          <div class="bs-card"><div class="bs-num">~5–15%</div><div class="bs-label">Typical sexual recidivism rate in long-term studies measuring new sexual convictions</div></div>
+          <div class="bs-card"><div class="bs-num">↓ over time</div><div class="bs-label">Risk of reoffense decreases significantly as years offense-free accumulate — called desistance</div></div>
+          <div class="bs-card"><div class="bs-num">93%</div><div class="bs-label">Of new sexual offenses committed by someone NOT currently on the registry</div></div>
+        </div>
+
+        <div class="pull-quote">
+          <p>The assumption that all people convicted of a sexual offense pose an equally high and permanent risk is not supported by the evidence. Individual risk varies widely — and can be assessed.</p>
+          <cite>— Consistent finding across major recidivism studies: Hanson & Bussière (1998), Lösel & Schmucker (2005), Harris & Hanson (2004)</cite>
+        </div>
+
+        <!-- FAMILIES -->
+        <span class="section-label" style="margin-top:56px;display:block;" id="families">Section 04 — Collateral Impact</span>
+        <h2 class="section-h">Impact on families and communities</h2>
+        <div class="section-rule"></div>
+
+        <div class="article-grid flip">
+          <div class="ag-photo">
+            <img src="https://images.unsplash.com/photo-1581952976147-5a2d15560349?w=700&q=80&auto=format&fit=crop" alt="Parent and children at home" loading="lazy">
+            <div class="ag-photo-caption">Children and spouses of registrants often bear significant collateral consequences they did not cause.</div>
+          </div>
+          <div class="ag-text">
+            <p>Registration doesn't affect only the person convicted. Research on collateral consequences is growing — and what it finds is sobering. Residency restrictions can force entire families to relocate. Public registry listings affect employment, housing, and community relationships for everyone who shares a home with a registrant.</p>
+            <p>Children of registrants often face social consequences at school when their parent's name appears on a public website. Spouses lose housing options, sometimes income, and regularly face social stigma for a conviction they had no part in.</p>
+            <div class="callout">
+              <p>Residency restrictions in many states make it mathematically impossible for a registrant to find legal housing in densely populated areas — pushing families toward rural isolation or homelessness.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- VIOLATIONS -->
+        <span class="section-label" style="margin-top:56px;display:block;" id="violations">Section 05 — Understanding the Data</span>
+        <h2 class="section-h">Paperwork violations vs. new crimes</h2>
+        <div class="section-rule"></div>
+
+        <p>When a registered person is arrested, it is often reported simply as a sex offender "reoffending." But there are several very different things that can trigger an arrest — and they are not remotely equivalent.</p>
+        <p>In most states, failing to update an address, forgetting to report a new vehicle, spending a night away from home without notifying authorities, or failing to report a new email address are all criminal offenses. These administrative violations are counted alongside new sexual assault allegations in many "recidivism" statistics.</p>
+
+        <div class="vd-wrap">
+          <p class="vd-caption">When a registrant is arrested, it could be for either of these — and they are not the same thing</p>
+          <div class="vd-row">
+            <div class="vd-box green">
+              <div class="vd-title g">Administrative / Technical Violation</div>
+              <ul>
+                <li>Failed to update address in time</li>
+                <li>Did not report a new vehicle</li>
+                <li>Spent a night away without reporting</li>
+                <li>Missed an in-person check-in</li>
+                <li>Did not report a new email or username</li>
+                <li>Travel not reported in advance</li>
+              </ul>
+            </div>
+            <div class="vd-mid">≠</div>
+            <div class="vd-box red">
+              <div class="vd-title r">New Sexual Offense Allegation</div>
+              <ul>
+                <li>Allegation of a new sexual assault</li>
+                <li>New abuse allegation</li>
+                <li>New contact offense</li>
+                <li>New exploitation offense</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="callout">
+          <p><strong>Both are crimes under state law.</strong> The point is that combining them in a single recidivism statistic tells us something very different than separating them — and that difference matters enormously for honest policy evaluation.</p>
+        </div>
+
+      </div><!-- /main -->
+
+      <!-- SIDEBAR -->
+      <div class="sidebar-sticky">
+
+        <div class="sidebar-box">
+          <div class="sb-title">What You'll Find Here</div>
+          <div class="sb-item">
+            <div class="sb-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="8" stroke="#2d6a8f" stroke-width="1.5"/><path d="M6 9l2 2 4-4" stroke="#2d6a8f" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div class="sb-item-text"><strong>Evidence Over Assumptions</strong><span>We examine what the research actually shows — not what's assumed.</span></div>
+          </div>
+          <div class="sb-item">
+            <div class="sb-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="3" y="2" width="12" height="14" rx="2" stroke="#2d6a8f" stroke-width="1.5"/><line x1="6" y1="6" x2="12" y2="6" stroke="#2d6a8f" stroke-width="1.2"/><line x1="6" y1="9" x2="12" y2="9" stroke="#2d6a8f" stroke-width="1.2"/><line x1="6" y1="12" x2="10" y2="12" stroke="#2d6a8f" stroke-width="1.2"/></svg></div>
+            <div class="sb-item-text"><strong>Decades of Data</strong><span>From government reports to peer-reviewed studies.</span></div>
+          </div>
+          <div class="sb-item">
+            <div class="sb-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="7" cy="6" r="3" stroke="#2d6a8f" stroke-width="1.5"/><circle cx="13" cy="6" r="3" stroke="#2d6a8f" stroke-width="1.5"/><circle cx="10" cy="13" r="3" stroke="#2d6a8f" stroke-width="1.5"/></svg></div>
+            <div class="sb-item-text"><strong>Real-World Impact</strong><span>Understanding how policies affect families and communities.</span></div>
+          </div>
+          <div class="sb-item">
+            <div class="sb-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="2" y="8" width="14" height="8" rx="1.5" stroke="#2d6a8f" stroke-width="1.5"/><path d="M6 8V6a4 4 0 018 0v2" stroke="#2d6a8f" stroke-width="1.5"/></svg></div>
+            <div class="sb-item-text"><strong>Legal Context</strong><span>Key court decisions shaping today's laws — explained plainly.</span></div>
+          </div>
+        </div>
+
+        <div class="sidebar-box">
+          <div class="sb-title">Latest Research Highlights</div>
+          <div class="research-item">
+            <div class="ri-title">Recidivism Among Registrants: A Comprehensive Review</div>
+            <div class="ri-meta">DOJ · 2020</div>
+            <a class="ri-link" href="https://registry-research-institute.netlify.app/" target="_blank">Read Summary →</a>
+          </div>
+          <div class="research-item">
+            <div class="ri-title">Collateral Consequences and Family Well-Being</div>
+            <div class="ri-meta">Criminal Justice Review · 2021</div>
+            <a class="ri-link" href="https://registry-research-institute.netlify.app/" target="_blank">Read Summary →</a>
+          </div>
+          <div class="research-item">
+            <div class="ri-title">State-by-State Registry Requirements Comparison</div>
+            <div class="ri-meta">NARSOL · 2023</div>
+            <a class="ri-link" href="https://registry-research-institute.netlify.app/" target="_blank">Explore Data →</a>
+          </div>
+          <div class="research-item">
+            <div class="ri-title">Desistance: What Long-Term Follow-Up Studies Show</div>
+            <div class="ri-meta">Harris & Hanson · 2004</div>
+            <a class="ri-link" href="https://registry-research-institute.netlify.app/" target="_blank">Read Summary →</a>
+          </div>
+        </div>
+
+        <div class="email-strip">
+          <h3>Stay Informed</h3>
+          <p>Get updates when new research or court decisions are published.</p>
+          <div class="email-form">
+            <input class="email-input" type="email" placeholder="Your email address">
+            <button class="email-btn">Subscribe</button>
+          </div>
+        </div>
+
+      </div><!-- /sidebar -->
+
+    </div><!-- /sidebar-layout -->
+  </div>
+</div>
+
+<!-- ════════════════════════ COURTS ════════════════════════ -->
+<div class="section alt" id="courts">
+  <div class="section-inner">
+    <span class="section-label">Court Decisions</span>
+    <h2 class="section-h">The legal landscape — explained plainly</h2>
+    <div class="section-rule"></div>
+
+    <div class="article-grid">
+      <div class="ag-photo">
+        <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=700&q=80&auto=format&fit=crop" alt="Federal courthouse" loading="lazy">
+        <div class="ag-photo-caption">Federal courts in multiple circuits are reconsidering whether expanded registry requirements remain constitutional.</div>
+      </div>
+      <div class="ag-text">
+        <p>The foundational case is <em>Smith v. Doe</em> (2003), in which the Supreme Court ruled that Alaska's registry was civil regulation rather than criminal punishment — allowing it to apply retroactively. That ruling shaped every legal challenge since.</p>
+        <p>But as requirements have expanded dramatically beyond what existed in 2003, courts are increasingly asking whether the original analysis still holds. The central legal question: has the registry crossed the line from regulation into punishment?</p>
+        <div class="callout sage">
+          <p><strong>The key question in courts today:</strong> Has the registry changed enough since 2003 that the original Supreme Court ruling no longer covers what states are actually doing?</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="court-grid">
+      <div class="court-card">
+        <div class="cc-name">Smith v. Doe</div>
+        <span class="cc-year">U.S. Supreme Court · 2003</span>
+        <p>The foundational case. The Court ruled Alaska's registry was civil regulation, not punishment — allowing retroactive application. But the registry reviewed in 2003 was far less expansive than what most states require today.</p>
+      </div>
+      <div class="court-card">
+        <div class="cc-name">Doe v. Snyder</div>
+        <span class="cc-year">6th Circuit Court of Appeals · 2016</span>
+        <p>A landmark departure. The court ruled Michigan's expanded requirements had become so burdensome they constituted punishment — and could not apply to people convicted before those rules existed.</p>
+      </div>
+      <div class="court-card">
+        <div class="cc-name">State v. Letalvis Cofield</div>
+        <span class="cc-year">North Carolina Supreme Court · 2023</span>
+        <p>North Carolina's highest court struck down satellite-based monitoring for some registrants as an unreasonable search under the Fourth Amendment. Courts are scrutinizing modern surveillance tools.</p>
+      </div>
+      <div class="court-card">
+        <div class="cc-name">Does v. Wasden & others</div>
+        <span class="cc-year">Multiple federal circuits · Ongoing</span>
+        <p>Challenges to expanded internet reporting, travel restrictions, and residency requirements are working through federal courts — arguing the system has grown beyond what any court has approved.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════ FAQ ════════════════════════ -->
+<div class="section" id="faq">
+  <div class="section-inner">
+    <span class="section-label">Common Questions</span>
+    <h2 class="section-h">Questions people actually search for</h2>
+    <div class="section-rule"></div>
+    <p style="max-width:600px;">These are the questions families, registrants, journalists, students, and curious citizens most often ask. Answered as plainly and honestly as the research allows.</p>
+
+    <div style="max-width:720px;margin-top:28px;">
+      <div class="faq">
+        <div class="faq-item"><div class="faq-q">Does the sex offender registry actually make communities safer? <span class="faq-icon">+</span></div><div class="faq-a"><p>The research on this is genuinely mixed. Some studies find modest public safety benefits in certain contexts. Others find little to no measurable reduction in sexual offending linked to registry laws. What researchers broadly agree on is that the evidence is not as clear-cut as the policy assumes — and that the system has grown significantly since it was first evaluated.</p></div></div>
+        <div class="faq-item"><div class="faq-q">Do sex offenders always reoffend? <span class="faq-icon">+</span></div><div class="faq-a"><p>No — and this is one of the most persistent myths the research pushes back on. Long-term studies consistently find that most people convicted of sexual offenses do not commit new sexual offenses after release. Risk also decreases significantly over time — a phenomenon called desistance.</p></div></div>
+        <div class="faq-item"><div class="faq-q">Can someone get off the sex offender registry? <span class="faq-icon">+</span></div><div class="faq-a"><p>It depends entirely on the state. Some states have petition processes allowing people to apply for removal after a certain number of offense-free years. Others have lifetime registration with no removal option. Federal law sets minimum standards but states can be more restrictive. An attorney familiar with your state's laws is the right resource for individual situations.</p></div></div>
+        <div class="faq-item"><div class="faq-q">What happens if someone misses a reporting deadline? <span class="faq-icon">+</span></div><div class="faq-a"><p>Missing a reporting requirement — even something like failing to report a new email address or an overnight stay away from home — can result in a new criminal charge in most states. These administrative violations are real crimes under state law, but they are paperwork offenses, not new sexual assaults. This distinction matters enormously when evaluating registry statistics.</p></div></div>
+        <div class="faq-item"><div class="faq-q">Most abuse is committed by strangers, right? <span class="faq-icon">+</span></div><div class="faq-a"><p>Research consistently shows the opposite. The majority of sexual offenses, particularly against children, are committed by someone the victim already knows — a family member, trusted adult, or acquaintance. The registry's public notification model is largely built around stranger danger, which research suggests does not reflect how most sexual harm actually occurs.</p></div></div>
+        <div class="faq-item"><div class="faq-q">Is the registry the same in every state? <span class="faq-icon">+</span></div><div class="faq-a"><p>No. Requirements vary significantly. Some states require quarterly in-person reporting; others annual. Some have residency restrictions within 2,500 feet of schools; others have none. Duration ranges from 10 years to lifetime. Federal law sets a minimum floor, but states can and do exceed it substantially.</p></div></div>
+        <div class="faq-item"><div class="faq-q">How does registration affect the children of registrants? <span class="faq-icon">+</span></div><div class="faq-a"><p>Children of registrants often face social consequences at school, loss of housing stability when residency restrictions force relocation, and stigma from a public registry listing they had no part in creating. Research on these collateral effects is growing and increasingly part of the policy conversation.</p></div></div>
+        <div class="faq-item"><div class="faq-q">Why is this website not advocacy? <span class="faq-icon">+</span></div><div class="faq-a"><p>Because the evidence doesn't belong to one side. This site follows the same principle as the Registry Research Institute: evidence before opinion. We're not arguing for or against the registry. We're explaining what the research shows so you can form your own informed view. Where science is mixed or uncertain, we say so clearly.</p></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════ PULL QUOTE ════════════════════════ -->
+<div style="background:var(--surface);padding:60px 32px;">
+  <div style="max-width:var(--max);margin:0 auto;">
+    <div class="pull-quote" style="max-width:760px;margin:0 auto;">
+      <p>The greatest threat to public safety is not knowledge, but ignorance.</p>
+      <cite>— Justice Louis D. Brandeis, U.S. Supreme Court</cite>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════ RRI BRIDGE ════════════════════════ -->
+<div class="rri-bridge">
+  <span class="section-label" style="color:rgba(255,255,255,.4);display:block;margin-bottom:12px;">Go Deeper</span>
+  <h2>This site summarizes. The research goes further.</h2>
+  <p>The Registry Research Institute publishes the full legal analysis, academic citations, visual evidence modules, and state-by-state research behind everything on this page.</p>
+  <a href="https://registry-research-institute.netlify.app/" target="_blank" rel="noopener" class="btn-gold">Visit the Registry Research Institute →</a>
+</div>
+
+<!-- ════════════════════════ ABOUT ════════════════════════ -->
+<div class="about-block" id="about">
+  <div class="about-inner">
+    <div class="about-left">
+      <div class="about-org">Florida Action Foundation</div>
+      <div class="about-sub">Behind This Site</div>
+      <div class="about-rule"></div>
+      <p style="font-size:.8rem;color:rgba(255,255,255,.45);line-height:1.65;">Founded 2025 · Florida-based<br>Education & Strategic Litigation</p>
+      <div class="about-pillars">
+        <div class="ab-pill"><strong>Evidence first</strong><span>Every claim grounded in published research or court record</span></div>
+        <div class="ab-pill"><strong>Plain language</strong><span>Written for real people, not insiders</span></div>
+        <div class="ab-pill"><strong>No advocacy framing</strong><span>Where research is mixed, we say so</span></div>
+        <div class="ab-pill"><strong>Primary sources</strong><span>Linked so you can verify everything</span></div>
+      </div>
+    </div>
+    <div class="about-right">
+      <span class="section-label">About This Site</span>
+      <h2 class="section-h" style="color:white;">Who is behind RegistryFacts.org?</h2>
+      <div class="section-rule"></div>
+      <p>This site is a public education resource produced in partnership with the <a href="https://floridaactionfoundation.org/" target="_blank" rel="noopener">Florida Action Foundation</a> — a Florida-based organization dedicated to evidence-based reform of sex offender registration laws through public education and strategic litigation.</p>
+      <p>The Foundation's approach is simple: evidence should lead. Not politics, not emotion, not advocacy for its own sake. RegistryFacts.org exists to make the research accessible to anyone — families navigating an unexpected reality, journalists covering a complex policy area, students, policymakers, and curious citizens — in plain, honest language.</p>
+      <p>For the full research, citations, and legal analysis behind this site, visit the <a href="https://registry-research-institute.netlify.app/" target="_blank" rel="noopener">Registry Research Institute</a>.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════ FOOTER ════════════════════════ -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand-name">RegistryFacts.org</div>
+      <div class="footer-brand-tag">Research. Evidence. Real Impact.</div>
+      <p style="font-size:.8rem;margin-top:14px;color:rgba(255,255,255,.35);line-height:1.65;">A public education resource of the Florida Action Foundation in partnership with the Registry Research Institute.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Topics</h4>
+      <a href="#what-is-it">What Is Registration?</a>
+      <a href="#how-it-changed">How It Changed</a>
+      <a href="#the-science">Risk & Science</a>
+      <a href="#violations">Violations Explained</a>
+      <a href="#families">Impact on Families</a>
+    </div>
+    <div class="footer-col">
+      <h4>Resources</h4>
+      <a href="#courts">Court Decisions</a>
+      <a href="#faq">Common Questions</a>
+      <a href="https://registry-research-institute.netlify.app/" target="_blank">Registry Research Institute</a>
+      <a href="https://floridaactionfoundation.org/" target="_blank">Florida Action Foundation</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 RegistryFacts.org · A Florida Action Foundation resource</span>
+    <span>For educational purposes only. Not legal advice. Last reviewed July 2026.</span>
+  </div>
+</footer>
+
+<script>
+// FAQ
+document.querySelectorAll('.faq-q').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    const item=btn.parentElement;
+    const open=item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
+    if(!open)item.classList.add('open');
+  });
+});
+// Hamburger
+const hb=document.getElementById('hb'),mm=document.getElementById('mm');
+hb.addEventListener('click',()=>{hb.classList.toggle('open');mm.classList.toggle('open');});
+document.querySelectorAll('.ml').forEach(l=>l.addEventListener('click',()=>{hb.classList.remove('open');mm.classList.remove('open');}));
+// Email subscribe
+document.querySelector('.email-btn').addEventListener('click',()=>{
+  const inp=document.querySelector('.email-input');
+  if(inp.value.includes('@')){inp.value='✓ You\'re subscribed!';inp.style.color='#3a6b50';}
+  else{inp.style.borderColor='#c04040';inp.focus();}
+});
+</script>
+</body>
+</html>
